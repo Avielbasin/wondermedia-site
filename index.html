@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wonder Media</title>
+<meta name="description" content="Wonder Media Ltd helps ambitious brands and products sharpen their message, reach the right audience, and grow." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Familjen+Grotesk:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --paper:#f1ebdd;
+    --paper-2:#e9e2cf;
+    --ink:#1b1a16;
+    --ink-soft:#56524a;
+    --accent:#df4324;
+    --rule:rgba(27,26,22,.16);
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Familjen Grotesk",sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .mono{font-family:"Space Mono",monospace;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+
+  header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1.5px solid var(--ink)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:"Fraunces";font-weight:900;font-size:1.35rem;letter-spacing:-.02em}
+  .brand b{color:var(--accent)}
+  .nlinks{display:flex;gap:26px}
+  .nlinks a{color:var(--ink);text-decoration:none}
+  .nlinks a:hover{color:var(--accent)}
+  @media(max-width:620px){.nlinks{display:none}}
+
+  .hero{padding:90px 0 30px;border-bottom:1.5px solid var(--ink)}
+  .hero .mono{color:var(--accent);margin-bottom:30px;display:block}
+  h1{font-family:"Fraunces";font-weight:900;letter-spacing:-.035em;line-height:.92;
+     font-size:clamp(3.4rem,13vw,9rem)}
+  h1 em{font-style:italic;font-weight:500;color:var(--accent)}
+  .lead{font-size:clamp(1.15rem,2.4vw,1.5rem);max-width:580px;margin:38px 0 12px;color:var(--ink-soft)}
+  .sig{font-family:"Fraunces";font-style:italic;font-size:1.15rem;color:var(--ink);margin-bottom:64px}
+
+  .marquee{border-bottom:1.5px solid var(--ink);background:var(--accent);color:var(--paper);overflow:hidden;padding:14px 0}
+  .track{display:inline-flex;white-space:nowrap;animation:scroll 26s linear infinite;font-family:"Fraunces";font-weight:600;font-size:1.4rem;font-style:italic}
+  .track span{padding:0 26px}
+  .track span::after{content:"\2731";margin-left:52px;font-style:normal;font-size:.8rem;vertical-align:middle}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  .block{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:64px 0;border-bottom:1.5px solid var(--rule);align-items:start}
+  @media(max-width:720px){.block{grid-template-columns:1fr;gap:20px;padding:48px 0}}
+  .num{font-family:"Fraunces";font-weight:900;font-size:3.6rem;color:var(--accent);line-height:1}
+  .num small{display:block;margin-top:8px;color:var(--ink);font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:400}
+  .block h2{font-family:"Fraunces";font-weight:600;font-size:clamp(1.7rem,4vw,2.6rem);letter-spacing:-.02em;line-height:1.08;margin-bottom:18px;max-width:760px}
+  .block p{font-size:1.12rem;color:var(--ink-soft);max-width:640px;margin-bottom:14px}
+  .block p b{color:var(--ink);font-weight:600}
+
+  .contact{padding:80px 0 70px;text-align:center}
+  .contact .mono{color:var(--accent);margin-bottom:22px}
+  .contact h2{font-family:"Fraunces";font-weight:900;letter-spacing:-.03em;font-size:clamp(2.6rem,9vw,5.5rem);line-height:.95;margin-bottom:26px}
+  .mail{font-family:"Fraunces";font-style:italic;font-weight:500;font-size:clamp(1.3rem,4vw,2.1rem);color:var(--accent);text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:3px}
+  .mail:hover{color:var(--ink);border-color:var(--ink)}
+
+  footer{border-top:1.5px solid var(--ink);overflow:hidden}
+  .wordmark{font-family:"Fraunces";font-weight:900;letter-spacing:-.04em;font-size:clamp(3.5rem,21vw,16rem);line-height:.8;padding:30px 0 14px;color:var(--ink);text-align:center;white-space:nowrap}
+  .frow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:0 28px 26px;color:var(--ink-soft)}
+  .frow .mono{color:var(--ink-soft)}
+
+  .reveal{opacity:0;transform:translateY(20px);animation:rise .85s cubic-bezier(.2,.7,.2,1) forwards}
+  .d1{animation-delay:.05s}.d2{animation-delay:.16s}.d3{animation-delay:.30s}.d4{animation-delay:.44s}
+  @keyframes rise{to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <div class="brand">Wonder<b>.</b>Media</div>
+      <div class="nlinks mono">
+        <a href="#believe">Believe</a>
+        <a href="#do">What We Do</a>
+        <a href="#how">How</a>
+        <a href="#contact">Say Hello</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="mono reveal d1">Wonder Media Ltd / Marketing &amp; growth</span>
+    <h1 class="reveal d2">Big&nbsp;ideas,<br><em>built to scale.</em></h1>
+    <p class="lead reveal d3">Wonder Media helps ambitious brands and products sharpen their message, reach the right audience, and grow.</p>
+    <p class="sig reveal d4">Curious by default. Relentless about what works.</p>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="track">
+    <span>Strategy</span><span>Growth</span><span>Audience</span><span>Brand</span><span>Story</span><span>Results</span>
+    <span>Strategy</span><span>Growth</span><span>Audience</span><span>Brand</span><span>Story</span><span>Results</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="block" id="believe">
+    <div class="num">01<small>What We Believe</small></div>
+    <div>
+      <h2>Growth is a craft, not a hack.</h2>
+      <p>The results that last do not come from tricks. They come from a clear message, the right audience, and work that is genuinely good. That is where every project begins.</p>
+      <p>Get the fundamentals right, and the growth tends to follow.</p>
+    </div>
+  </div>
+
+  <div class="block" id="do">
+    <div class="num">02<small>What We Do</small></div>
+    <div>
+      <h2>We help good ideas find their audience.</h2>
+      <p>From positioning and brand to marketing and performance, <b>Wonder Media</b> connects businesses and digital products with the people who will love them, then turns that attention into real momentum.</p>
+      <p>Strategy when you need direction. Execution when you need it to actually happen.</p>
+    </div>
+  </div>
+
+  <div class="block" id="how">
+    <div class="num">03<small>How We Work</small></div>
+    <div>
+      <h2>Built to scale, not to stall.</h2>
+      <p>We work in fast loops: sharpen the message, put it in front of real people, learn from what they do, and double down on what works.</p>
+      <p>It is a patient, evidence led way of growing a business, and it tends to compound.</p>
+    </div>
+  </div>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="mono">Say hello</span>
+    <h2>Let's grow<br>something good.</h2>
+    <a class="mail" href="mailto:aviel@wondermedia.com">aviel@wondermedia.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wordmark">WONDER MEDIA</div>
+  <div class="frow">
+    <span class="mono">&copy; <span id="yr"></span> Wonder Media Ltd</span>
+    <span class="mono">Marketing &amp; growth</span>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
